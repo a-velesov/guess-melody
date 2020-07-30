@@ -1,0 +1,23 @@
+.random-bird {
+  display: flex;
+  padding: 1rem;
+}
+
+.random-bird .bird-image {
+  width: 200px;
+  height: 155px;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.random-bird .list-group {
+  width: 100%;
+}
+
+.random-bird .list-group-item {
+  padding: .25rem;
+}
+
+.random-bird .list-group-item .term {
+  margin-right: .5rem;
+}

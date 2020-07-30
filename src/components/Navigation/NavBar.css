@@ -1,0 +1,38 @@
+.header {
+    margin-top: .5rem;
+    padding-left: 10px;
+    flex-direction: column;
+}
+
+.header ul {
+    justify-content: space-between;
+}
+
+.header ul li {
+    list-style: none;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.header ul li:hover {
+    background-color: #444;
+}
+
+.header a:hover {
+    text-decoration: none;
+}
+
+.header h3 a {
+    color: white;
+}
+
+.header h3 a:hover {
+    color: #00bc8c;
+}
+
+
+.top-panel {
+    margin: 20px 0;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -7,6 +7,8 @@ export const AnswerItem = (props) => {
       <li className='list-group-item'>Журавль</li>
       <li className='list-group-item'>Воробей</li>
       <li className='list-group-item'>Синица</li>
+      <li className='list-group-item'>Синица</li>
+      <li className='list-group-item'>Синица</li>
     </>
   );
 };

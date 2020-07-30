@@ -7,10 +7,14 @@ export const ActiveQuiz = (props) => {
   return (
     <>
       <QuizQuestion />
+
+      <div className='row'>
+
       <AnswerList />
       <AnswerDetails />
 
-      <button>Next</button>
+      </div>
+      <button className='btn'>Next</button>
 
     </>
   );

@@ -6,13 +6,7 @@ import { ActiveQuiz } from '../../components/ActiveQuiz/ActiveQuiz';
 export const Layout = (props) => {
   return (
     <div>
-      <header>
-        <div>
-          <img src="" alt="Logo" />
-          <Score />
-        </div>
         <NavBar />
-      </header>
       <main>
         <ActiveQuiz />
       </main>
