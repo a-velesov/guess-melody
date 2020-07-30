@@ -12,7 +12,7 @@ export const QuizQuestion = (props) => {
               <h2>*****</h2>
             </li>
             <li className="list-group-item">
-              <AudioPlayer showJumpControls={false} layout='stacked-reverse' src="https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3" />
+              <AudioPlayer layout='horizontal' showJumpControls={false} src="https://www.xeno-canto.org/sounds/uploaded/VOLIQOYWKG/XC489247-190724_09.10h_huiszwaluw_biesbosch_amaliahoeve_roep_100%2Bex_fouragerend_gezien_%20%282%29.mp3" />
             </li>
        </ul>
     </div>

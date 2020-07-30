@@ -1,3 +1,17 @@
-.answer-list li {
-    padding: .95rem 1.25rem;
+.answer-list ul li {
+    padding: .91rem 1.25rem;
+}
+
+@media (max-width: 992px) {
+    .answer {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .answer-list ul li {
+        padding: 1rem 1.25rem;
+    }
 }

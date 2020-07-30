@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export const Quiz = (props) => {
-  return (
-    <div>
+class Quiz extends Component {
+  render() {
+    return (
+      <div>
 
-    </div>
-  );
-};
+   </div>
+    );
+  }
+}
+
+export default Quiz;

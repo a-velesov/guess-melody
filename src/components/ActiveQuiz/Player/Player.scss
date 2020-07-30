@@ -147,7 +147,8 @@ $rhap_font-family: inherit !default;
 }
 
 .rhap_additional-controls {
-  display: flex;
+  /*display: flex;*/
+  display: none;
   flex: 1 0 auto;
   align-items: center;
 }

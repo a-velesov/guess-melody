@@ -1,32 +1,38 @@
 .answer-details {
-  display: flex;
-  padding: 1rem;
-  border: 1px solid #444;
-  width: 100%;
+    max-width: 100%;
 }
+
+
+.answer-details-card {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #444;
+    max-width: 100%;
+}
+
 .answer-image {
-  width: 200px;
-  height: 185px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-right: 2rem;
+    width: 200px;
+    height: 185px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 1rem;
 }
 
 .answer-details .list-group-item {
-  padding: .25rem;
+    padding: .25rem;
 }
 
-.answer-details .list-group-item .term{
-  margin-right: .5rem;
+.answer-details .list-group-item .term {
+    margin-right: .5rem;
 }
 
 .card-body {
-  display: flex;
-  padding: 0;
-  flex-direction: row;
-  min-height: 190px;
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    min-height: 190px;
 }
 
 .card-body .list-group {
-  width: calc(100% - 240px);
+    width: calc(100% - 215px);
 }

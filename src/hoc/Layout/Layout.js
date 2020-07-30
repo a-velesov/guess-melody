@@ -5,11 +5,11 @@ import { ActiveQuiz } from '../../components/ActiveQuiz/ActiveQuiz';
 
 export const Layout = (props) => {
   return (
-    <div>
+    <>
         <NavBar />
       <main>
         <ActiveQuiz />
       </main>
-    </div>
+    </>
   );
 };

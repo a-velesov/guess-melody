@@ -4,10 +4,12 @@ import './AnswerList.css'
 
 export const AnswerList = (props) => {
   return (
-    <div className='col-md-6'>
-      <ul className='answer-list item-list list-group'>
+    <div className='answer col-md-6'>
+      <div className="answer-list">
+      <ul className='item-list list-group'>
         <AnswerItem />
       </ul>
+        </div>
     </div>
   );
 };
