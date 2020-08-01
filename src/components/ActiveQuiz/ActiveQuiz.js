@@ -45,7 +45,10 @@ export class ActiveQuiz extends Component {
     <>
       <NavBar />
 
-      <QuizQuestion question={this.props.question} />
+      <QuizQuestion
+        question={this.props.question}
+        answerId={this.state.answerId}
+      />
 
       <div className='answer-blocks row'>
 

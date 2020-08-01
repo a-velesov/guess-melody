@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './AnswerDetails.css';
 import AudioPlayer from 'react-h5-audio-player';
 import './../Player/Player.scss';
@@ -13,7 +13,7 @@ export const AnswerDetails = (props) => {
           ? props.info.map(key => {
               if(key.id === props.details) {
                 return (
-                  <>
+                  <Fragment key={key.id}>
                   <div className='card-body'>
                     <img className='answer-image' src={ key.image } alt="Bird" />
                     <ul className="list-group list-group-flush">
@@ -27,7 +27,7 @@ export const AnswerDetails = (props) => {
                     </ul>
                   </div>
                     <span className='card-text'>{ key.description }</span>
-                  </>
+                  </Fragment>
                 );
               }
             })
