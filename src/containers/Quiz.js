@@ -323,9 +323,6 @@ class Quiz extends Component {
     return question[idx]
   }
 
-
- // {birds} -> { train:[{}{}{}{}{}{}{}], sparrows [{}{}{}{}{}{}{}] }
-
   render() {
     const questionList = Object.keys(this.state.birds)
 

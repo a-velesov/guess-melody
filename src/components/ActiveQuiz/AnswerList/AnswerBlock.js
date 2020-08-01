@@ -6,8 +6,8 @@ export const AnswerBlock = (props) => {
 
   return (
     <>
-      <AnswerItem click={props.click} name={ props.answer } answerStatus={props.answerStatus} />
-      <AnswerDetails details={props.answerId} info={ props.answer } answerId={props.answerId} />
+      <AnswerItem click={props.click} answer={ props.answer } answerStatus={props.answerStatus} answerId={props.answerId ? props.answerId : ''} />
+      <AnswerDetails info={ props.answer } answerId={props.answerId} />
       </>
   );
 };

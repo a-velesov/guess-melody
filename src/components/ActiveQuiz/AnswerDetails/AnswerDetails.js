@@ -11,7 +11,7 @@ export const AnswerDetails = (props) => {
 
         { props.answerId
           ? props.info.map(key => {
-              if(key.id === props.details) {
+              if(key.id === props.answerId) {
                 return (
                   <Fragment key={key.id}>
                   <div className='card-body'>

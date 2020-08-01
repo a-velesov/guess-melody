@@ -11,8 +11,8 @@ export class ActiveQuiz extends Component {
     answerStatus: false,
   }
 
-
-
+  successAudio = new Audio('/audio/success.mp3')
+  errorAudio = new Audio('/audio/error.mp3')
 
   onClickAnswerId = (id) => {
     this.setState({
@@ -20,12 +20,19 @@ export class ActiveQuiz extends Component {
     })
 
     if(this.props.question.id === id) {
+      this.successAudio.play()
       this.setState({
-        answerStatus: {[id]: 'success' }
+        answerStatus: {
+          ...this.state.answerStatus,
+          [id]: 'success'
+        }
       })
     } else {
+      this.errorAudio.play()
       this.setState({
-        answerStatus: {[id]: 'error'}
+        answerStatus: {
+          ...this.state.answerStatus,
+          [id]: 'error'}
       })
     }
   }
