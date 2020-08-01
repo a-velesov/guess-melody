@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './ActiveQuiz.css';
 import { QuizQuestion } from './QuizQuestion/QuizQuestion';
 import { NavBar } from '../Navigation/NavBar';
 import { AnswerBlock } from './AnswerList/AnswerBlock';
 
-export const ActiveQuiz = (props) => {
+export class ActiveQuiz extends Component {
 
-  const randomQuestion = () => {
-    let idx = Math.floor(Math.random() * Math.floor(6));
-    return props.questions[idx]
+  state = {
+    answerId: null
   }
 
-/*  { props.questions.map((key, i) => {
+
+  onClickAnswerId = (id) => {
+    this.setState({
+      answerId: id
+    })
+  }
+
+  render() {
+
+
+  /*  { props.questions.map((key, i) => {
 
     /!*          const questionItem = Object.entries(key).forEach(([k, ind]) => {
      return console.log(k ,ind)
@@ -36,15 +45,20 @@ export const ActiveQuiz = (props) => {
     <>
       <NavBar />
 
-      <QuizQuestion question={randomQuestion()} />
+      <QuizQuestion question={this.props.question} />
 
       <div className='answer-blocks row'>
 
-      <AnswerBlock answer={props.questions} />
+      <AnswerBlock
+        answer={this.props.questions}
+        click={this.onClickAnswerId}
+        answerId={this.state.answerId}
+      />
 
 
       </div>
       <button className='btn'>Next</button>
     </>
   );
+  }
 };

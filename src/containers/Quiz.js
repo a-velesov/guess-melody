@@ -313,8 +313,17 @@ class Quiz extends Component {
     answerStatus: null,
     activeQuestion: 0,
     isFinished: false,
-    store: 0
+    store: 0,
+
   };
+
+  randomQuestion = () => {
+    let idx = Math.floor(Math.random() * Math.floor(6));
+    const questionList = Object.keys(this.state.birds)
+    const question =  this.state.birds[questionList[this.state.activeQuestion]]
+    return question[idx]
+  }
+
 
  // {birds} -> { train:[{}{}{}{}{}{}{}], sparrows [{}{}{}{}{}{}{}] }
 
@@ -325,8 +334,11 @@ class Quiz extends Component {
       <>
       <ActiveQuiz
         questions={this.state.birds[questionList[this.state.activeQuestion]]}
+        question={this.randomQuestion()}
         answerNumber={this.state.activeQuestion + 1}
         quizLength={questionList.length}
+
+
 
       />
 
