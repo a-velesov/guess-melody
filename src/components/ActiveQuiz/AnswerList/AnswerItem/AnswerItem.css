@@ -2,6 +2,23 @@
     padding: .91rem 1.25rem;
 }
 
+.answer-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+    background-color: #444;
+}
+
+.success {
+    background-color: #00bc8c;
+}
+
+.error {
+    background-color: crimson;
+}
+
 @media (max-width: 992px) {
     .answer {
         max-width: 100%;

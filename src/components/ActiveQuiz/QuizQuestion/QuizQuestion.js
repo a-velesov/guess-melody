@@ -6,15 +6,10 @@ import birdsNone from './../../../assets/img/birdsNone.jpg'
 
 export const QuizQuestion = (props) => {
 
-  const rightAnswer = () => {
-    if(props.question.id === props.answerId)
-      return true
-  }
-
   return (
     <div className='random-bird jumbotron rounded'>
       {
-        rightAnswer()
+        props.answerStatus
           ? <img className='bird-image' src={ props.question.image } alt="Bird" />
           : <img className='bird-image' src={ birdsNone } alt="Bird" />
       }
@@ -24,7 +19,7 @@ export const QuizQuestion = (props) => {
             <li className="list-group-item">
               <h2>
               {
-                rightAnswer() ? props.question.name : '*****'
+                props.answerStatus ? props.question.name : '*****'
               }
               </h2>
             </li>

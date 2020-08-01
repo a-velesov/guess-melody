@@ -310,7 +310,6 @@ class Quiz extends Component {
 
   state = {
     birds: birdsData,
-    answerStatus: null,
     activeQuestion: 0,
     isFinished: false,
     store: 0,
@@ -337,8 +336,6 @@ class Quiz extends Component {
         question={this.randomQuestion()}
         answerNumber={this.state.activeQuestion + 1}
         quizLength={questionList.length}
-
-
 
       />
 

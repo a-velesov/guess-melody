@@ -7,39 +7,30 @@ import { AnswerBlock } from './AnswerList/AnswerBlock';
 export class ActiveQuiz extends Component {
 
   state = {
-    answerId: null
+    answerId: null,
+    answerStatus: false,
   }
+
+
 
 
   onClickAnswerId = (id) => {
     this.setState({
       answerId: id
     })
+
+    if(this.props.question.id === id) {
+      this.setState({
+        answerStatus: {[id]: 'success' }
+      })
+    } else {
+      this.setState({
+        answerStatus: {[id]: 'error'}
+      })
+    }
   }
 
   render() {
-
-
-  /*  { props.questions.map((key, i) => {
-
-    /!*          const questionItem = Object.entries(key).forEach(([k, ind]) => {
-     return console.log(k ,ind)
-     })*!/
-
-
-    //console.log(questionItem[idx]);
-    console.log('key', key);
-
-
-    return <QuizQuestion
-      id={key.id}
-      name={key.name}
-      species={key.species}
-      image={key.image}
-      audio={key.audio}
-    />
-  })
-  }*/
 
   return (
     <>
@@ -48,6 +39,7 @@ export class ActiveQuiz extends Component {
       <QuizQuestion
         question={this.props.question}
         answerId={this.state.answerId}
+        answerStatus={this.state.answerStatus}
       />
 
       <div className='answer-blocks row'>
@@ -56,6 +48,7 @@ export class ActiveQuiz extends Component {
         answer={this.props.questions}
         click={this.onClickAnswerId}
         answerId={this.state.answerId}
+        answerStatus={this.state.answerStatus}
       />
 
 
