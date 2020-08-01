@@ -1,14 +1,21 @@
 import React from 'react';
+import './AnswerItem.css';
 
 export const AnswerItem = (props) => {
   return (
     <>
-      <li className='list-group-item'>Ворон</li>
-      <li className='list-group-item'>Журавль</li>
-      <li className='list-group-item'>Воробей</li>
-      <li className='list-group-item'>Синица</li>
-      <li className='list-group-item'>Синица</li>
-      <li className='list-group-item'>Синица</li>
+      <div className='answer col-md-6'>
+      <div className="answer-list">
+        <ul className='item-list list-group'>
+
+      {
+        props.name.map(key => {
+          return <li key={key.name} className='list-group-item' onClick={() => props.onClickDetails}>{ key.name }</li>;
+        })
+      }
+        </ul>
+      </div>
+      </div>
     </>
   );
 };
