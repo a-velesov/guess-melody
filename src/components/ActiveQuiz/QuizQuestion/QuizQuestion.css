@@ -3,12 +3,12 @@
   padding: 1rem;
 }
 
-.random-bird .bird-image {
-  width: 200px;
-  height: 155px;
+.bird-image {
+  width: 190px;
+  height: 165px;
   border-radius: 10px;
-  margin-right: 1rem;
   object-fit: cover;
+  margin-right: 1rem;
 }
 
 .random-bird .list-group {
@@ -21,4 +21,29 @@
 
 .random-bird .list-group-item .term {
   margin-right: .5rem;
+}
+
+
+@media (max-width: 768px) {
+.random-bird {
+   display: flex;
+   padding: 1rem;
+   flex-direction: column;
+   align-items: center;
+ }
+
+  .birds-name {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .rhap_time {
+    display: none;
+  }
+
+  .bird-image {
+    margin: 1rem 0;
+  }
 }

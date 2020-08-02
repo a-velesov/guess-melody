@@ -23,12 +23,12 @@ export const QuizQuestion = (props) => {
        <ul className="list-group list-group-flush">
 
             <li className="list-group-item">
-              <h2>
+              <h2 className='birds-name'>
                 { title }
               </h2>
             </li>
             <li className="list-group-item">
-              <AudioPlayer layout='horizontal' showJumpControls={ false } src={ props.question.audio } />
+              <AudioPlayer layout='horizontal' autoPlayAfterSrcChange={false} showJumpControls={ false } src={ props.question.audio } />
             </li>
        </ul>
     </div>

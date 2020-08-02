@@ -14,14 +14,14 @@ export const AnswerDetails = (props) => {
               return (
                 <Fragment key={ key.id }>
                   <div className='card-body'>
-                    <img className='answer-image' src={ key.image } alt="Bird" />
+                    <img className='bird-image' src={ key.image } alt="Bird" />
                     <ul className="list-group list-group-flush">
                       <li className="list-group-item">
-                        <h2>{ key.name }</h2>
+                        <h4>{ key.name }</h4>
                       </li>
                       <li className="list-group-item">{ key.species }</li>
                       <li className="list-group-item">
-                        <AudioPlayer layout='stacked' showJumpControls={ true } src={ key.audio } />
+                        <AudioPlayer autoPlayAfterSrcChange={false} layout='stacked' showJumpControls={ true } src={ key.audio } />
                       </li>
                     </ul>
                   </div>
