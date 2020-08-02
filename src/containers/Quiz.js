@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './Quiz.css';
 import { ActiveQuiz } from '../components/ActiveQuiz/ActiveQuiz';
 
 
@@ -313,26 +312,32 @@ class Quiz extends Component {
     activeQuestion: 0,
     isFinished: false,
     store: 0,
-
   };
 
   randomQuestion = () => {
     let idx = Math.floor(Math.random() * Math.floor(6));
-    const questionList = Object.keys(this.state.birds)
-    const question =  this.state.birds[questionList[this.state.activeQuestion]]
-    return question[idx]
-  }
+    const questionList = Object.keys(this.state.birds);
+    const question = this.state.birds[questionList[this.state.activeQuestion]];
+    return question[idx];
+  };
+
+  onClickActiveQuestion = () => {
+    this.setState({
+      activeQuestion: this.state.activeQuestion + 1,
+    });
+  };
 
   render() {
-    const questionList = Object.keys(this.state.birds)
+    const questionList = Object.keys(this.state.birds);
 
     return (
       <>
       <ActiveQuiz
-        questions={this.state.birds[questionList[this.state.activeQuestion]]}
-        question={this.randomQuestion()}
-        answerNumber={this.state.activeQuestion + 1}
-        quizLength={questionList.length}
+        questions={ this.state.birds[questionList[this.state.activeQuestion]] }
+        question={ this.randomQuestion() }
+        onClickActiveQuestion={ this.onClickActiveQuestion }
+        activeQuestion={ this.state.activeQuestion }
+        quizLength={ questionList.length }
 
       />
 

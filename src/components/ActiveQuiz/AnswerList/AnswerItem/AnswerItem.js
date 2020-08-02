@@ -13,8 +13,9 @@ export const AnswerItem = (props) => {
         props.answer.map(key => {
           return <li key={ key.id }
                      className='list-group-item'
-                     onClick={ () => props.click(key.id) }>
-            <i className={`answer-status ${props.answerStatus ? props.answerStatus[key.id] : ''}`} />
+                     onClick={ () => props.click(key.id) }
+          >
+            <i className={ `answer-status ${ props.answerStatus ? props.answerStatus[key.id] : '' }` } />
             { key.name }
           </li>;
         })

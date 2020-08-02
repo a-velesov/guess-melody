@@ -2,18 +2,18 @@ import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
 import './../Player/Player.scss';
 import './QuizQuestion.css';
-import birdsNone from './../../../assets/img/birdsNone.jpg'
+import birdsNone from './../../../assets/img/birdsNone.jpg';
 
 export const QuizQuestion = (props) => {
 
   let src = [ birdsNone ];
-  let title = ['******']
+  let title = [ '******' ];
   Object.values(props.answerStatus).map(key => {
-    if (key === 'success') {
+    if(key === 'success') {
       src.splice(0, 1, [ props.question.image ]);
-      title.splice(0, 1 , [props.question.name])
+      title.splice(0, 1, [ props.question.name ]);
     }
-  })
+  });
 
   return (
     <div className='random-bird jumbotron rounded'>
@@ -24,11 +24,11 @@ export const QuizQuestion = (props) => {
 
             <li className="list-group-item">
               <h2>
-                {title}
+                { title }
               </h2>
             </li>
             <li className="list-group-item">
-              <AudioPlayer layout='horizontal' showJumpControls={ false } src={props.question.audio} />
+              <AudioPlayer layout='horizontal' showJumpControls={ false } src={ props.question.audio } />
             </li>
        </ul>
     </div>

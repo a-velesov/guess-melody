@@ -8,12 +8,11 @@ export const AnswerDetails = (props) => {
     <div className='answer-details col-md-6'>
       <div className="answer-details-card card">
 
-
         { props.answerId
           ? props.info.map(key => {
-              if(key.id === props.answerId) {
-                return (
-                  <Fragment key={key.id}>
+            if(key.id === props.answerId) {
+              return (
+                <Fragment key={ key.id }>
                   <div className='card-body'>
                     <img className='answer-image' src={ key.image } alt="Bird" />
                     <ul className="list-group list-group-flush">
@@ -28,9 +27,9 @@ export const AnswerDetails = (props) => {
                   </div>
                     <span className='card-text'>{ key.description }</span>
                   </Fragment>
-                );
-              }
-            })
+              );
+            }
+          })
           : <p>Послушайте плеер. <br /> Выберите птицу из списка</p>
         }
       </div>
