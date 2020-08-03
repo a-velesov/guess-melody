@@ -15,7 +15,7 @@ export const AnswerItem = (props) => {
                      className='list-group-item'
                      onClick={ () => props.click(key.id) }
           >
-            <i className={ `answer-status ${ props.answerStatus ? props.answerStatus[key.id] : '' }` } />
+            <i className={ `answer-status ${ props.answerStatus[key.id] ? props.answerStatus[key.id] : '' }` } />
             { key.name }
           </li>;
         })

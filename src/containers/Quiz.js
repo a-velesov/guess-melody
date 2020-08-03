@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { ActiveQuiz } from '../components/ActiveQuiz/ActiveQuiz';
+import { FinishedQuiz } from '../components/FinishedQuiz/FinishedQuiz';
 
 
 const birdsData = {
@@ -305,41 +306,47 @@ const birdsData = {
   ],
 };
 
+const questionList = Object.keys(birdsData);
+
 class Quiz extends Component {
 
   state = {
     birds: birdsData,
     activeQuestion: 0,
     isFinished: false,
-    store: 0,
-  };
-
-  randomQuestion = () => {
-    let idx = Math.floor(Math.random() * Math.floor(6));
-    const questionList = Object.keys(this.state.birds);
-    const question = this.state.birds[questionList[this.state.activeQuestion]];
-    return question[idx];
   };
 
   onClickActiveQuestion = () => {
     this.setState({
       activeQuestion: this.state.activeQuestion + 1,
-    });
+    }, () => this.isFinished());
+  };
+
+  isFinished = () => {
+    if(this.state.activeQuestion + 1 === questionList.length) {
+      this.setState({
+        isFinished: true,
+      });
+    }
   };
 
   render() {
-    const questionList = Object.keys(this.state.birds);
+    let idx = Math.floor(Math.random() * Math.floor(6));
+    const questions = this.state.birds[questionList[this.state.activeQuestion]];
 
     return (
       <>
-      <ActiveQuiz
-        questions={ this.state.birds[questionList[this.state.activeQuestion]] }
-        question={ this.randomQuestion() }
-        onClickActiveQuestion={ this.onClickActiveQuestion }
-        activeQuestion={ this.state.activeQuestion }
-        quizLength={ questionList.length }
+        {
+          this.state.isFinished
+            ? <FinishedQuiz />
+            : <ActiveQuiz
+              questions={ questions }
+              question={ questions[idx] }
+              onClickActiveQuestion={ this.onClickActiveQuestion }
+              activeQuestion={ this.state.activeQuestion }
+            />
+        }
 
-      />
 
       </>
     );
