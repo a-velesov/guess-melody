@@ -4,13 +4,13 @@ import { AnswerBlock } from '../components/ActiveQuiz/AnswerList/AnswerBlock';
 import { NavBar } from '../components/Navigation/NavBar';
 import { FinishedQuiz } from '../components/FinishedQuiz/FinishedQuiz';
 
-export class Quiz extends Component {
+class Quiz extends Component {
 
   state = {
     answerId: null,
     answerStatus: false,
     score: 0,
-    isFinished: false
+    rightAnswer: false
   };
 
   successAudio = new Audio('/audio/success.mp3');
@@ -21,6 +21,7 @@ export class Quiz extends Component {
       answerId: id,
     });
 
+    if(!this.state.rightAnswer){
     if(this.props.question.id === id) {
       this.successAudio.play();
       this.setState({
@@ -38,7 +39,7 @@ export class Quiz extends Component {
           [id]: 'error',
         },
       });
-    }
+    }}
   };
 
   scoreSummary = () => {
@@ -47,11 +48,16 @@ export class Quiz extends Component {
       this.setState({
         ...this.state.score,
         score: this.state.score + score,
+        rightAnswer: true,
       });
   };
 
-
-
+  resetState = () => {
+    this.props.retryQuiz();
+    this.setState({
+      score: 0
+    })
+  }
 
   componentDidUpdate(prevProps) {
     if(this.props.activeQuestion !== prevProps.activeQuestion) {
@@ -63,12 +69,15 @@ export class Quiz extends Component {
   }
 
   render() {
-    return (
+     return (
       <>
         <NavBar score={this.state.score} />
          {
            this.props.isFinished
-             ? <FinishedQuiz score={this.state.score} />
+             ? <FinishedQuiz
+               score={this.state.score}
+               retryQuiz={this.resetState}
+             />
              : <>
              <QuizQuestion
                question={ this.props.question }
@@ -89,3 +98,5 @@ export class Quiz extends Component {
     );
   }
 }
+
+export default Quiz;

@@ -1,6 +1,5 @@
 import React from 'react';
 import './NavBar.css'
-import { Score } from '../Score/Score';
 
 export const NavBar = (props) => {
   return (
@@ -11,17 +10,17 @@ export const NavBar = (props) => {
           Song Bird
         </a>
       </h3>
-      <Score />
+      <div>Score: {props.score}</div>
       </div>
       <ul className="pagination">
         <li className='page-item'>
-          <a className='page-link' href="#">Хищные</a>
+          <a className='page-link'>Хищные</a>
         </li>
         <li className='page-item'>
-          <a className='page-link' href="#">Морские</a>
+          <a className='page-link'>Морские</a>
         </li>
         <li className='page-item'>
-          <a className='page-link' href="#">Приезжие</a>
+          <a className='page-link'>Приезжие</a>
         </li>
       </ul>
       </header>

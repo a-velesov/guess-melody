@@ -10,7 +10,11 @@ export const AnswerBlock = (props) => {
   return (
     <>
       <div className='answer-blocks row'>
-      <AnswerItem click={ props.click } answer={ props.answer } answerStatus={ props.answerStatus } answerId={ props.answerId ? props.answerId : '' } />
+      <AnswerItem click={ props.click }
+                  answer={ props.answer }
+                  answerStatus={ props.answerStatus }
+                  answerId={ props.answerId ? props.answerId : '' }
+      />
       <AnswerDetails info={ props.answer } answerId={ props.answerId } />
       </div>
 

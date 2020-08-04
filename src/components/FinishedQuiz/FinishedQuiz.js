@@ -11,7 +11,7 @@ export const FinishedQuiz = (props) => {
       {
         props.score === 30
           ? <div>Отличный результат! Сам Дроздов вам завидует!</div>
-          : <button className='retry btn success'>Попробовать еще раз</button>
+          : <button onClick={() => props.retryQuiz()} className='retry btn success'>Попробовать еще раз</button>
       }
 
     </div>

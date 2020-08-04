@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Quiz } from './Quiz';
+import Quiz from './Quiz';
 
 
 const birdsData = {
@@ -332,6 +332,13 @@ class ActiveQuiz extends Component {
       });
     }
 
+  retryQuiz = () => {
+    this.setState({
+      activeQuestion: 0,
+      isFinished: false
+    });
+  }
+
   render() {
     let idx = Math.floor(Math.random() * 6);
     const questions = this.state.birds[questionList[this.state.activeQuestion]];
@@ -343,6 +350,7 @@ class ActiveQuiz extends Component {
               onClickActiveQuestion={ this.onClickActiveQuestion }
               activeQuestion={ this.state.activeQuestion }
               isFinished={this.state.isFinished}
+              retryQuiz={this.retryQuiz}
             />
     )
   }
