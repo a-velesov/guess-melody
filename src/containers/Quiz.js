@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ActiveQuiz } from '../components/ActiveQuiz/ActiveQuiz';
-import { FinishedQuiz } from '../components/FinishedQuiz/FinishedQuiz';
 
 
 const birdsData = {
@@ -317,39 +316,35 @@ class Quiz extends Component {
   };
 
   onClickActiveQuestion = () => {
+    const {activeQuestion} = this.state
+    if(activeQuestion + 1 < questionList.length){
     this.setState({
       activeQuestion: this.state.activeQuestion + 1,
-    }, () => this.isFinished());
+    });
+    } else {
+      this.isFinished()
+    }
   };
 
   isFinished = () => {
-    if(this.state.activeQuestion + 1 === questionList.length) {
       this.setState({
         isFinished: true,
       });
     }
-  };
 
   render() {
-    let idx = Math.floor(Math.random() * Math.floor(6));
+    let idx = Math.floor(Math.random() * 6);
     const questions = this.state.birds[questionList[this.state.activeQuestion]];
 
     return (
-      <>
-        {
-          this.state.isFinished
-            ? <FinishedQuiz />
-            : <ActiveQuiz
+        <ActiveQuiz
               questions={ questions }
               question={ questions[idx] }
               onClickActiveQuestion={ this.onClickActiveQuestion }
               activeQuestion={ this.state.activeQuestion }
+              isFinished={this.state.isFinished}
             />
-        }
-
-
-      </>
-    );
+    )
   }
 }
 

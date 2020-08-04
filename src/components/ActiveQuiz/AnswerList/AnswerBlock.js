@@ -4,10 +4,20 @@ import { AnswerDetails } from '../AnswerDetails/AnswerDetails';
 
 export const AnswerBlock = (props) => {
 
+  let status = Object.values(props.answerStatus).find(key => key === 'success');
+
   return (
-      <>
+    <>
+      <div className='answer-blocks row'>
       <AnswerItem click={ props.click } answer={ props.answer } answerStatus={ props.answerStatus } answerId={ props.answerId ? props.answerId : '' } />
       <AnswerDetails info={ props.answer } answerId={ props.answerId } />
-      </>
+      </div>
+
+
+      <button
+        onClick={ status ? props.onClickActiveQuestion : null }
+        className={ `btn ${ status ? 'success' : '' }` }
+      >Next</button>
+    </>
   );
 };

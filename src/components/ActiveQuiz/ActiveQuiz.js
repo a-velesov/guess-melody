@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
 import './ActiveQuiz.css';
 import { QuizQuestion } from './QuizQuestion/QuizQuestion';
-import { NavBar } from '../Navigation/NavBar';
 import { AnswerBlock } from './AnswerList/AnswerBlock';
-import ReactDOM from 'react-dom';
+import { NavBar } from '../Navigation/NavBar';
+import { FinishedQuiz } from '../FinishedQuiz/FinishedQuiz';
 
 export class ActiveQuiz extends Component {
 
   state = {
     answerId: null,
     answerStatus: false,
+    score: 0,
+    isFinished: false
   };
 
   successAudio = new Audio('/audio/success.mp3');
   errorAudio = new Audio('/audio/error.mp3');
 
-  onClickAnswerId = (id) => {
+  onClickAnswerStatus = (id) => {
     this.setState({
       answerId: id,
     });
@@ -28,6 +30,7 @@ export class ActiveQuiz extends Component {
           [id]: 'success',
         },
       });
+      this.scoreSummary();
     } else {
       this.errorAudio.play();
       this.setState({
@@ -39,6 +42,18 @@ export class ActiveQuiz extends Component {
     }
   };
 
+  scoreSummary = () => {
+    let error = Object.values(this.state.answerStatus);
+    let score = 5 - error.length;
+      this.setState({
+        ...this.state.score,
+        score: this.state.score + score,
+      });
+  };
+
+
+
+
   componentDidUpdate(prevProps) {
     if(this.props.activeQuestion !== prevProps.activeQuestion) {
       this.setState({
@@ -49,31 +64,28 @@ export class ActiveQuiz extends Component {
   }
 
   render() {
-    let status = Object.values(this.state.answerStatus).find(key => key === 'success');
-
     return (
       <>
-      <NavBar />
+        <NavBar score={this.state.score} />
+         {
+           this.props.isFinished
+             ? <FinishedQuiz score={this.state.score} />
+             : <>
+             <QuizQuestion
+               question={ this.props.question }
+               answerId={ this.state.answerId }
+               answerStatus={ this.state.answerStatus }
+             />
 
-      <QuizQuestion
-        question={ this.props.question }
-        answerId={ this.state.answerId }
-        answerStatus={ this.state.answerStatus }
-      />
-
-      <div className='answer-blocks row'>
-
-      <AnswerBlock
-        answer={ this.props.questions }
-        click={ this.onClickAnswerId }
-        answerId={ this.state.answerId }
-        answerStatus={ this.state.answerStatus }
-      />
-
-      </div>
-
-      <button onClick={ status ? this.props.onClickActiveQuestion : null } className={ `btn ${ status ? 'success' : null }` }>Next</button>
-
+             <AnswerBlock
+             answer={ this.props.questions }
+             click={ this.onClickAnswerStatus }
+             answerId={ this.state.answerId }
+             answerStatus={ this.state.answerStatus }
+             onClickActiveQuestion={this.props.onClickActiveQuestion}
+             />
+             </>
+         }
     </>
     );
   }
