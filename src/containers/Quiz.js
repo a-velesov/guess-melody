@@ -64,6 +64,7 @@ class Quiz extends Component {
       this.setState({
         answerId: null,
         answerStatus: false,
+        rightAnswer: false,
       });
     }
   }
@@ -71,7 +72,12 @@ class Quiz extends Component {
   render() {
      return (
       <>
-        <NavBar score={this.state.score} />
+        <NavBar
+          score={this.state.score}
+          type={this.props.type}
+          activeQuestion={this.props.activeQuestion}
+          birds={ this.props.birds }
+        />
          {
            this.props.isFinished
              ? <FinishedQuiz
@@ -91,6 +97,7 @@ class Quiz extends Component {
              answerId={ this.state.answerId }
              answerStatus={ this.state.answerStatus }
              onClickActiveQuestion={this.props.onClickActiveQuestion}
+             type={this.props.type}
              />
              </>
          }

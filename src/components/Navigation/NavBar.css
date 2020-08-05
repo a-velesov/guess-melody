@@ -1,6 +1,4 @@
 .header {
-    margin-top: .5rem;
-    padding-left: 10px;
     flex-direction: column;
 }
 
@@ -11,11 +9,8 @@
 .header ul li {
     list-style: none;
     margin: 0;
-    border-radius: 5px;
-}
-
-.header ul li:hover {
-    background-color: #444;
+    flex: auto;
+    text-align: center;
 }
 
 .header a:hover {
@@ -23,11 +18,44 @@
 }
 
 .header h3 a {
+    font-family: 'QTVagaRound', 'Arial', sans-serif;
+    font-size: 36px;
     color: white;
 }
 
-.header h3 a:hover {
-    color: #00bc8c;
+
+.text-focus-in {
+    -webkit-animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+@keyframes text-focus-in {
+    0% {
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.active {
+    background-color: #099f79;
 }
 
 
