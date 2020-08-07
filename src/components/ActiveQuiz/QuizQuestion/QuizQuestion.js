@@ -28,7 +28,12 @@ export const QuizQuestion = (props) => {
               </h2>
             </li>
             <li className="list-group-item">
-              <AudioPlayer layout='horizontal' autoPlayAfterSrcChange={false} showJumpControls={ false } src={ props.question.audio } />
+              <AudioPlayer layout='horizontal'
+                           volume='0.5'
+                           autoPlayAfterSrcChange={false}
+                           showJumpControls={ false }
+                           src={ props.rightAnswer ? '' : props.question.audio }
+              />
             </li>
        </ul>
     </div>

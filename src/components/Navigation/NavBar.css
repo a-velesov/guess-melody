@@ -4,6 +4,7 @@
 
 .header ul {
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .header ul li {
@@ -21,6 +22,10 @@
     font-family: 'QTVagaRound', 'Arial', sans-serif;
     font-size: 36px;
     color: white;
+}
+
+.page-link:hover {
+    background: #00bc8c;
 }
 
 
@@ -55,7 +60,7 @@
 }
 
 .active {
-    background-color: #099f79;
+    background-color: #048d6a;
 }
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './NavBar.css'
+import './NavBar.css';
 
 export const NavBar = (props) => {
 
@@ -11,42 +11,21 @@ export const NavBar = (props) => {
           SongBird
         </a>
       </h3>
-      <div>Score: {props.score}</div>
+      <div>Score: { props.score }</div>
       </div>
       <ul className="pagination">
         {
-          Object.values(props.type).map(key => (
-            <li className='page-item'>
-              <a className={ `page-link ${key === props.type[props.activeQuestion] ? 'active' : ''}`  }
-              >{ props.birds[key][0].stage }</a>
+          Object.values(props.type).map(item => (
+            <li
+              key={ item }
+              className='page-item'
+            >
+              <a className={ `page-link ${ item === props.type[props.activeQuestion] ? 'active' : '' }` }
+              >{ props.birds[item][0].stage }</a>
             </li>
-
           ))
         }
 
-{/*        {
-          navItem.map(key => (
-            <li className='page-item'>
-              <a data-link='train' className='page-link'>{ key }</a>
-            </li>
-          ))
-        }*/}
-
-       {/* <li className='page-item'>
-          <a data-link='sparrows' className='page-link'>Воробьиные</a>
-        </li>
-        <li className='page-item'>
-          <a data-link='forest' className='page-link'>Лесные</a>
-        </li>
-        <li className='page-item'>
-          <a data-link='singers' className='page-link'>Певчие</a>
-        </li>
-        <li className='page-item'>
-          <a data-link='predator' className='page-link'>Хищные</a>
-        </li>
-        <li className='page-item'>
-          <a data-link='sea' className='page-link'>Морские</a>
-        </li>*/}
       </ul>
       </header>
   );

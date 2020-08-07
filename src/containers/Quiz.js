@@ -89,6 +89,7 @@ class Quiz extends Component {
                question={ this.props.question }
                answerId={ this.state.answerId }
                answerStatus={ this.state.answerStatus }
+               rightAnswer={this.state.rightAnswer}
              />
 
              <AnswerBlock

@@ -1,49 +1,49 @@
 .random-bird {
-  display: flex;
-  padding: 1rem;
+    display: flex;
+    padding: 1rem;
 }
 
 .bird-image {
-  width: 190px;
-  height: 165px;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-right: 1rem;
+    width: 190px;
+    height: 165px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 1rem;
 }
 
 .random-bird .list-group {
-  width: 100%;
+    width: 100%;
 }
 
 .random-bird .list-group-item {
-  padding: .25rem;
+    padding: .25rem;
 }
 
 .random-bird .list-group-item .term {
-  margin-right: .5rem;
+    margin-right: .5rem;
 }
 
 
 @media (max-width: 768px) {
-.random-bird {
-   display: flex;
-   padding: 1rem;
-   flex-direction: column;
-   align-items: center;
- }
+    .random-bird {
+        display: flex;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .birds-name {
-    text-align: center;
-  }
+    .birds-name {
+        text-align: center;
+    }
 
 }
 
 @media (max-width: 500px) {
-  .rhap_time {
-    display: none;
-  }
+    .rhap_time {
+        display: none;
+    }
 
-  .bird-image {
-    margin: 1rem 0;
-  }
+    .bird-image {
+        margin: 1rem 0;
+    }
 }

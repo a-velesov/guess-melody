@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './AnswerDetails.css';
 import AudioPlayer from 'react-h5-audio-player';
-import './../Player/Player.scss';
+import './../Player/Player.scss'
 
 export const AnswerDetails = (props) => {
   return (
@@ -21,7 +21,13 @@ export const AnswerDetails = (props) => {
                       </li>
                       <li className="list-group-item">{ key.species }</li>
                       <li className="list-group-item">
-                        <AudioPlayer autoPlayAfterSrcChange={false} layout='stacked' showJumpControls={ true } src={ key.audio } />
+                        <AudioPlayer
+                          autoPlayAfterSrcChange={ false }
+                          volume='0.5'
+                          layout='stacked'
+                          showJumpControls={ true }
+                          src={ key.audio }
+                        />
                       </li>
                     </ul>
                   </div>
