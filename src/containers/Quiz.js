@@ -24,6 +24,7 @@ class Quiz extends Component {
     if(!this.state.rightAnswer){
     if(this.props.question.id === id) {
       this.successAudio.play();
+      this.successAudio.volume = 0.4;
       this.setState({
         answerStatus: {
           ...this.state.answerStatus,
@@ -33,6 +34,7 @@ class Quiz extends Component {
       this.scoreSummary();
     } else {
       this.errorAudio.play();
+      this.errorAudio.volume = 0.9;
       this.setState({
         answerStatus: {
           ...this.state.answerStatus,
