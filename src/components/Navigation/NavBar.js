@@ -7,8 +7,8 @@ export const NavBar = (props) => {
     <header className='header d-flex'>
     <div className='top-panel d-flex'>
       <h3>
-        <a className='text-focus-in'>
-          SongBird
+        <a href='/' className='text-focus-in'>
+          Guess the melody
         </a>
       </h3>
       <div>Score: { props.score }</div>

@@ -22,10 +22,16 @@
     font-family: 'QTVagaRound', 'Arial', sans-serif;
     font-size: 36px;
     color: white;
+    text-transform: uppercase;
+}
+
+.page-link {
+    border-left: #000 1px solid;
 }
 
 .page-link:hover {
-    background: #00bc8c;
+    background-color: #00bc8c;
+    border-left: #000 1px solid;
 }
 
 
@@ -60,7 +66,7 @@
 }
 
 .active {
-    background-color: #048d6a;
+    background-color: #056c53;
 }
 
 
