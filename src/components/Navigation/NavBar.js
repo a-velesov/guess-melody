@@ -5,13 +5,13 @@ export const NavBar = (props) => {
 
   return (
     <header className='header d-flex'>
-    <div className='top-panel d-flex'>
-      <h3>
-        <a href='/' className='text-focus-in'>
-          Guess the melody
-        </a>
-      </h3>
-      <div>Score: { props.score }</div>
+      <div className='top-panel d-flex'>
+        <h3>
+          <a href='/' className='text-focus-in'>
+            Guess the melody
+          </a>
+        </h3>
+        <div>Score: { props.score }</div>
       </div>
       <ul className="pagination">
         {
@@ -20,13 +20,13 @@ export const NavBar = (props) => {
               key={ item }
               className='page-item'
             >
-              <a className={ `page-link ${ item === props.type[props.activeQuestion] ? 'active' : '' }` }
-              >{ props.birds[item][0].stage }</a>
+              <span className={ `page-link ${ item === props.type[props.activeQuestion] ? 'active' : '' }` }
+              >{ props.birds[item][0].stage }</span>
             </li>
           ))
         }
 
       </ul>
-      </header>
+    </header>
   );
 };
