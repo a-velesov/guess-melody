@@ -132,7 +132,7 @@ const songsData = {
       song: 'Back in Black',
       description: 'AC/DC - (сокр. от англ. alternating current/direct current — переменный/постоянный ток) — австралийская рок-группа, сформированная в Сиднее, Австралия в ноябре 1973 года братьями Малькольмом и Ангусом Янгами.',
       image: 'https://lastfm.freetls.fastly.net/i/u/300x300/59a73cd6307323070398a6141c3e3274.webp',
-      audio: 'https://github.com/a-velesov/songbird/blob/songbird/src/assets/music/rock/ac-dc-back-in-black.mp3',
+      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/rock/ac-dc-back-in-black.mp3',
     },
     {
       id: 3,
