@@ -244,7 +244,7 @@ const songsData = {
       song: 'Skating in Central Park',
       description: 'Билл Эванс — американский джазовый пианист и композитор.Эванс оказал значительное влияние на развитие фортепианного трио и камерного джаза и внес уникальный творческий вклад — тонкие, изобретательные сольные импровизации.',
       image: 'https://lastfm.freetls.fastly.net/i/u/300x300/f57b8492fe3e408fc021bb5fbaa2bee1.webp',
-      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/jazz/Bill%20Evans%20and%20Jim%20Hall%20Skating%20In%20Central%20Park.mp3',
+      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/jazz/Bill-Evans-Skating-In-Central-Park.mp3',
     },
     {
       id: 3,
@@ -253,7 +253,7 @@ const songsData = {
       song: 'Blue in green',
       description: 'Майлз Дэвис -  американский джазовый трубач и бэнд-лидер, оказавший значительнейшее влияние на развитие музыки XX века. Дэвис стоял у истоков множества стилей и направлений в джазе.',
       image: 'https://lastfm.freetls.fastly.net/i/u/300x300/77be9d4f51949813088eba8d87db8235.webp',
-      audio: 'https://github.com/a-velesov/songbird/blob/songbird/src/assets/music/jazz/miles_davis-blue_in_green.mp3',
+      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/jazz/miles-davis-blue-in-green.mp3',
     },
     {
       id: 4,
@@ -262,7 +262,7 @@ const songsData = {
       song: 'Hit the Road Jack',
       description: 'Рэй Чарльз – американский музыкант, автор более 70 студийных альбомов, один из известнейших в мире исполнителей музыки в стилях соул, джаз и ритм-энд-блюз. Был награждён 13 премиями «Грэмми».',
       image: 'https://lastfm.freetls.fastly.net/i/u/300x300/6c85e46cffb04e9da74f0a9b10501e0d.webp',
-      audio: 'https://github.com/a-velesov/songbird/blob/songbird/src/assets/music/jazz/ray_charles_-_hit_the_road_jack.mp3',
+      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/jazz/ray-charles-hit-the-road-jack.mp3',
     },
     {
       id: 5,
@@ -271,7 +271,7 @@ const songsData = {
       song: 'What a Wonderful World',
       description: 'Армстронг Дэниел Луи - великий американский джазовый музыкант, трубач, руководитель оркестра, композитор. В своем творчестве он соединил несоединимое: индивидуальный тип самовыражения с беспредельной общедоступностью музыки.',
       image: 'https://lastfm.freetls.fastly.net/i/u/300x300/59b2c835ffff448f87499e062303260e.webp',
-      audio: 'https://github.com/a-velesov/songbird/blob/songbird/src/assets/music/jazz/Louis_Armstrong_-_What_A_Wonderful_World.mp3',
+      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/jazz/Louis-Armstrong-What-A-Wonderful-World.mp3',
     },
     {
       id: 6,
@@ -280,7 +280,7 @@ const songsData = {
       song: 'My Way',
       description: 'Францис Альберт Синатра - американский киноактёр, кинорежиссёр, продюсер, шоумен, певец (крунер). Одиннадцать раз становился лауреатом премии «Грэмми»[5]. Славился романтическим стилем исполнения песен и «бархатным» тембром голоса.',
       image: 'https://lastfm.freetls.fastly.net/i/u/300x300/964860a21da54503a17c741436905281.webp',
-      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/jazz/Frank_Sinatra_-_My_Way.mp3',
+      audio: 'https://github.com/a-velesov/songbird/raw/songbird/src/assets/music/jazz/Frank_Sinatra-My-Way.mp3',
     },
   ],
   classic: [
