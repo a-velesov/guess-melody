@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { QuizQuestion } from '../components/ActiveQuiz/QuizQuestion/QuizQuestion';
-import { AnswerBlock } from '../components/ActiveQuiz/AnswerList/AnswerBlock';
+import { QuizQuestion } from '../components/ActiveQuiz/Question/QuizQuestion';
+import { AnswerBlock } from '../components/ActiveQuiz/Answer/AnswerBlock/AnswerBlock';
 import { NavBar } from '../components/Navigation/NavBar';
 import { FinishedQuiz } from '../components/FinishedQuiz/FinishedQuiz';
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import AudioPlayer from 'react-h5-audio-player';
-import './../Player/Player.scss';
+import '../Player/Player.scss';
 import './QuizQuestion.css';
 import mic from './../../../assets/img/mic.jpg';
 import { Loader } from '../../Loader/Loader';

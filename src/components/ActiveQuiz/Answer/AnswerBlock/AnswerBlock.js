@@ -1,5 +1,5 @@
 import React from 'react';
-import { AnswerItem } from './AnswerItem/AnswerItem';
+import { AnswerItem } from '../AnswerItem/AnswerItem';
 import { AnswerDetails } from '../AnswerDetails/AnswerDetails';
 import './AnswerBlock.css';
 
