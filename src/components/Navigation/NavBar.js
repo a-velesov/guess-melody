@@ -8,10 +8,10 @@ export const NavBar = (props) => {
       <div className='top-panel d-flex'>
         <h3>
           <a href='/' className='text-focus-in'>
-            Guess the melody
+            Guess <span className='decor'>the</span> melody
           </a>
         </h3>
-        <div>Score: { props.score }</div>
+        <div className='score'>{ props.score }<span className='decor'>♫</span></div>
       </div>
       <ul className="pagination">
         {

@@ -8,21 +8,20 @@ import { Loader } from '../../Loader/Loader';
 export const QuizQuestion = (props) => {
 
   const audioRef = useRef(null);
-  const [loading, setLoading] = useState(true)
+  const [ loading, setLoading ] = useState(true);
 
   useEffect(() => {
-    console.log(loading)
     audioRef.current.audio.current.onabort = () => {
-      setLoading(true)
-    }
+      setLoading(true);
+    };
     audioRef.current.audio.current.oncanplaythrough = () => {
-      setLoading(false)
-    }
+      setLoading(false);
+    };
 
     if(audioRef.current && props.rightAnswer) {
       audioRef.current.audio.current.pause();
     }
-  })
+  });
 
   let src = [ mic ];
   let title = [ '******' ];
@@ -35,31 +34,31 @@ export const QuizQuestion = (props) => {
 
   return (
     <>
-    {
-      loading ?  <Loader /> : null
-    }
-    <div className='random-bird jumbotron rounded'>
+      {
+        loading ? <Loader /> : null
+      }
+      <div className='random-bird jumbotron rounded'>
 
-      <img className='bird-image' src={ src } alt="Bird" />
+        <img className='bird-image' src={ src } alt="Bird" />
 
-      <ul className="list-group list-group-flush">
+        <ul className="list-group list-group-flush">
 
-        <li className="list-group-item">
-          <h2 className='birds-name'>
-            { title }
-          </h2>
-        </li>
-        <li className="list-group-item">
-          <AudioPlayer layout='horizontal'
-                       volume='0.4'
-                       ref={ audioRef }
-                       autoPlayAfterSrcChange={ false }
-                       showJumpControls={ false }
-                       src={ props.question.audio }
-          />
-        </li>
-      </ul>
-    </div>
+          <li className="list-group-item">
+            <h2 className='birds-name'>
+              { title }
+            </h2>
+          </li>
+          <li className="list-group-item">
+            <AudioPlayer layout='horizontal'
+                         volume='0.4'
+                         ref={ audioRef }
+                         autoPlayAfterSrcChange={ false }
+                         showJumpControls={ false }
+                         src={ props.question.audio }
+            />
+          </li>
+        </ul>
+      </div>
     </>
   );
 };
