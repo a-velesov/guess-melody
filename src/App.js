@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
+import ActiveQuiz from './containers/ActiveQuiz';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <ActiveQuiz />
   );
 }
 

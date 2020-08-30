@@ -1,0 +1,25 @@
+.answer-details {
+    max-width: 100%;
+}
+
+.answer-details-card {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #444;
+    max-width: 100%;
+    min-height: 315px;
+}
+
+.answer-details .list-group-item {
+    padding: .25rem;
+}
+
+.answer-details .list-group-item .term {
+    margin-right: .5rem;
+}
+
+@media (max-width: 1200px) {
+    .answer-details-card {
+        min-height: 333px;
+    }
+}

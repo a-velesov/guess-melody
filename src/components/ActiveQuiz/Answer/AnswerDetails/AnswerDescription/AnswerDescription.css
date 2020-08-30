@@ -1,0 +1,33 @@
+.card-body {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+    min-height: 190px;
+}
+
+.card-body .list-group {
+    width: calc(100% - 215px);
+}
+
+@media (max-width: 992px) {
+    .card-body {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .card-body .list-group {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .card-text {
+        text-align: center;
+        margin: .5rem;
+    }
+
+    .answer-details-card {
+        min-height: auto;
+    }
+}

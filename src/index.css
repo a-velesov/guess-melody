@@ -1,3 +1,21 @@
+
+@font-face {
+  font-family: 'Mansalva';
+  src: local('Mansalva'), url('./assets/fonts/Mansalva-Regular.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'QTVagaRound';
+  src: local('QTVagaRound'), url('./assets/fonts/QTVagaRoundBold.ttf');
+  font-style: normal;
+  font-weight: bold;
+}
+
+* {
+  outline: none !important;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
